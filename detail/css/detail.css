@@ -1,0 +1,396 @@
+* {margin: 0; padding: 0;font-family: 'Noto Sans KR', sans-serif;}
+img {display: block;}
+a {text-decoration: none; color: black;}
+
+
+/************** header **************/
+.header {
+  width: 100%;
+  height: 2222px;
+  height: 80px;
+  background: #FEF100;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  padding-top: 15px;
+  margin: 0 auto;
+}
+.logo img {
+  width: 100%;
+  height: 50px;
+}
+
+
+#chec01 {display: none;}
+#chec01:checked ~ .header .open {display: none;}
+#chec01:checked ~ .header .close {display: block;}
+
+#chec01 ~ .header .close {display: none;}
+#chec01 ~ .header .open {display: block;}
+
+#chec01:checked ~ .btn_page {left: 0;}
+
+.open {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  font-size: 25px;
+}
+.close {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  font-size: 25px;
+}
+.sch {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  font-size: 23px;
+}
+
+#search_btn {display: none;}
+#search_btn:checked ~ .search {top: 80px;}
+
+.search {
+  width: 100%;
+  padding: 8px 0;
+  background-color: #FEF100;
+  position: fixed;
+  border-top: 1px solid #777;
+  box-sizing: border-box;
+  top: 31px;
+  transition: all 0.5s;
+  z-index: 3;
+}
+.search .sch_txt {
+  width: 80%;
+  height: 30px;
+  margin: 0 auto;
+  background: white;
+  border: 1px solid #ccc;
+  position: relative;
+}
+.search .sch_txt i {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.search .sch_txt input {
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  border: none;
+}
+
+/***** Btn_page *****/
+.btn_page {
+  width: 100%;
+  height: 2222px;
+  position: absolute;
+  left: -100%;
+  top: 80px;
+  background: white;
+  transition: all 0.3s;
+  z-index: 999;
+}
+/* login */
+.login {
+  padding: 25px 25px 10px 25px;
+  text-align: center;
+}
+.login p {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.login .join {
+  display: flex;
+}
+.login .join p {
+  width: calc(50% - 5px);
+  height: 40px;
+  line-height: 40px;
+  border-radius: 30px;
+  margin-right: 10px;
+  background: #FEF100;
+}
+.login .join p:last-child {
+  background: #ccc;
+  margin: 0;
+}
+/* intro */
+.intro {
+  display: flex;
+  background: #FEF100;
+  text-align: center;
+  padding: 0 25px 0 25px;
+}
+.intro>div {
+  width: 33.3%;
+  height: 110px;
+  flex-grow: 1;
+}
+.intro i {
+  font-size: 53px;
+  margin-top: 17px;
+}
+.intro .txt {
+  font-size: 14px;
+}
+/* cate */
+.cate {
+  padding: 0 25px 0 25px;
+  margin-top: 20px;
+}
+.cate .top,
+.cate .bottom {
+  display: flex;
+  margin-bottom: 10px;
+}
+.cate .top>div,
+.cate .bottom>div {
+  width: calc(50% - 5px);
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  /* margin-right: 10px; */
+}
+.cate .top figure,
+.cate .bottom figure {
+  /* width: 100%; */
+  height: 150px;
+}
+.cate .top figure img,
+.cate .bottom figure img {
+  width: 100%;
+  height: 150px;
+}
+.cate .txt {
+  padding: 5px;
+  text-align: center;
+  font-weight: 500;
+}
+.cate .top .rice {
+  margin-left: 10px;
+}
+.cate .bottom .desert {
+  margin-left: 10px;
+}
+
+
+
+/************** spageti **************/
+.spageti {
+  margin-top: 90px;
+  padding: 0 25px 0 25px;
+  margin-bottom: 25px;
+}
+.spageti .info {
+  font-size: 12px;
+  color: #555;
+}
+
+.spageti .pro_name {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.spageti .pro_name h1 {
+  font-weight: 300;
+  font-size: 20px;
+}
+.spageti .pro_name .line {
+  width: 50px;
+  height: 1px;
+  background: black;
+  margin: 10px auto;
+}
+.spageti .pro_name .pro_info {
+  font-size: 12px;
+}
+
+.spageti .pro01 {
+  width: 100%;
+  height: 300px;
+  background: #ccc;
+  margin-bottom: 10px;
+}
+.spageti .pro01 figure {
+  width: 100%;
+  height: 300px;
+  border: 1px solid #ccc;
+}
+.spageti .pro01 figure img {
+  width: 100%;
+  height: 300px;
+}
+
+
+.spageti .pro_detail_info {
+  border: 1px solid black;
+}
+.spageti .pro_detail_info>div {
+  display: flex;
+}
+.spageti .pro_detail_info .title {
+  width: 30%;
+  background: #f2f2f2;
+  text-align: center;
+}
+.spageti .pro_detail_info .sub {
+  width: 70%;
+  padding: 10px;
+  font-size: 12px;
+}
+.spageti .pro_detail_info .weight .title {
+  padding: 5px 8px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+.spageti .pro_detail_info .weight .sub {
+  border-bottom: 1px solid black;
+}
+.spageti .pro_detail_info .property .title {
+  padding: 20px 8px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+.spageti .pro_detail_info .property .sub {
+  border-bottom: 1px solid black;
+}
+.spageti .pro_detail_info .origin .title {
+  padding: 50px 8px;
+  border-right: 1px solid black;
+}
+
+
+/************** more **************/
+.more {
+  padding: 0 25px 0 25px;
+  margin-bottom: 25px;
+  display: flex;
+}
+.more div {
+  width: calc(50% - 5px);
+  text-align: center;
+  padding: 8px;
+  border: 1px solid black;
+}
+.more .mall_d {
+  background: #FEF100;;
+  margin-right: 10px;
+}
+
+
+
+
+/************** footer **************/
+.footer {
+  padding: 20px 0;
+}
+.footer .footer_top {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+.footer .footer_top>div {
+  width: 50%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  text-align: center;
+  background: #f7f7f7;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+
+}
+
+.footer .sns {
+  padding: 0 25px;
+  display: flex;
+  justify-content: center;
+}
+.footer .sns>div {
+  margin-right: 10px;
+}
+.footer .sns>div:last-child {
+  margin: 0;
+}
+.footer .sns>div figure {
+  width: 35px;
+  height: 35px;
+}
+.footer .sns>div figure img {
+  width: 100%;
+  height: 35px;
+}
+
+.footer .f_logo {
+  width: 100%;
+  height: 60px;
+  margin: 10px 0;
+}
+.footer .f_logo figure {
+  width: 50%;
+  height: 60px;
+  margin: 0 auto;
+}
+.footer .f_logo figure img {
+  width: 100%;
+  height: 60px;
+}
+
+
+.footer .txt {
+  padding: 0 25px;
+  font-size: 12px;
+  text-align: center;
+  margin: 10px 0;
+}
+.footer .sub_txt {
+  padding: 0 25px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.footer .wa_mark {
+  padding: 0 25px;
+  margin: 10px 0;
+}
+.footer .wa_mark figure {
+  width: 60%;
+  height: 45px;
+  margin: 0 auto;
+}
+.footer .wa_mark figure img {
+  width: 100%;
+  height: 45px;
+}
+
+/************** scroll_top **************/
+.scroll_top {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  background: #FEF100;
+  position: fixed;
+  bottom: 20px;
+  right: 15px
+}
+.scroll_top a {
+  width: 100%;
+  height: 30px;
+}
+.scroll_top a i{
+  padding-left: 7px;
+}
